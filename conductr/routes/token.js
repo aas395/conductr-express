@@ -1,8 +1,9 @@
 var express = require('express');
 var router = express.Router();
+var cors = require('cors')
 
 /* GET users listing. */
-router.get('/', function(req, res, next) {
+router.get('/', cors(), function(req, res, next) {
 	var watson = require('watson-developer-cloud');
 
 	var authorization = new watson.AuthorizationV1({
